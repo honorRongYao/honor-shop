@@ -1,20 +1,45 @@
 <?php namespace ProcessWire;
+	$home_url=$pages->get("template=home")->httpUrl;
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>QYZQ</title>
+		<meta name="viewpoint" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="<?=$template_url?>css/404.css" />
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	</head>
+	<body>
+		<div class="code">
+			<p>ERROR 404</p>
+		</div>
+		<div class="road">
+			<div class="shadow">
+				<div class="shelt">
+					<div class="head">
+						<div class="eyes">
+							<div class="lefteye">
+								<div class="eyeball"></div>
+								<div class="eyebrow"></div>
+							</div>
+							<div class="righteye">
+								<div class="eyeball"></div>
+								<div class="eyebrow"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hat"></div>
+				<div class="bubble">
+					<a href="<?=$home_url?>">Go back Home?</a>
+				</div>
+			</div>
+			<p>PAGE NOT FOUND</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="<?=$template_url?>js/404.js" ></script>
+</html>
 
-// basic-page.php template file 
-// See README.txt for more information
 
-// Primary content is the page's body copy
-$content = $page->body; 
-
-// If the page has children, then render navigation to them under the body.
-// See the _func.php for the renderNav example function.
-if($page->hasChildren) {
-	$content .= renderNav($page->children);
-}
-
-// if the rootParent (section) page has more than 1 child, then render 
-// section navigation in the sidebar
-if($page->rootParent->hasChildren > 1) {
-	$sidebar = renderNavTree($page->rootParent, 3) . $page->sidebar; 
-}
 

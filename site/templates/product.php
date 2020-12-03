@@ -134,7 +134,7 @@
                       <select class="selectpicker">
                         <?php
                           foreach($product_sales as $v){
-                            echo '<option onchange="changeColor('.$v[1].')">'.$v[0].'</option>';
+                            echo '<option>'.$v[0].'</option>';
                           }
                         ?>
                       </select>
